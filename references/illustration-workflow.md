@@ -6,9 +6,9 @@ Illustrations support the finished long-form article. A failure in image acquisi
 
 Choose 5 to 10 positions in the final article where an image materially helps the reader understand a person, object, event, document, place, or comparison. Do not add an irrelevant image to meet the count.
 
-Prefer public-domain, open-licensed, or explicitly reusable material. Official news media can serve as an identity or reporting source, but its image is not automatically reusable. Without an explicit license or permission, mark the image `授权状态：需人工确认`; never describe copyright as cleared.
+Select images by subject relevance, technical quality, provenance, and the absence of visible watermarks. Rights status is recorded for later human review; it is not a gate for image selection or completion. Do not reject, replace, or omit an otherwise suitable image merely because its rights are unknown, unstated, or not explicitly reusable. When no explicit license or permission is found, include the image and mark it `授权状态：需人工确认` unless the source clearly states a restriction that makes use unsuitable. Never describe copyright as cleared without supporting terms; the publication decision remains with the user.
 
-For each position, inspect the source page for the highest available original image rather than accepting a thumbnail or search preview. Avoid watermarks, placeholders, CAPTCHA pages, error images, misleading crops, duplicate photographs, and images whose subject or attribution is unclear.
+For each position, inspect the source page for the highest available original image rather than accepting a thumbnail or search preview. Reject visible watermarks. Also reject placeholders, CAPTCHA pages, error images, misleading crops, duplicate photographs, and images whose subject or attribution is unclear.
 
 Download accepted candidates into the run's temporary workspace. Use contiguous two-digit names with the real extension:
 

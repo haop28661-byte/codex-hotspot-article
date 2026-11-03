@@ -166,7 +166,7 @@ Write captions in the article's human voice. Keep them concrete and brief, expla
 
 If fewer than five images can be verified, do not add irrelevant files. Preserve the completed text and verified images, write `交付说明.md`, and package the run as `部分完成`. If image capabilities are unavailable, use the same fallback after the text deliverables are complete.
 
-Image technical verification does not establish publication rights. Record unresolved rights explicitly and never describe an unlicensed image as cleared.
+Image technical verification does not establish publication rights. Do not reject or replace an otherwise suitable, watermark-free image merely because its rights are unknown or not explicitly reusable. Record unresolved rights as `需人工确认`, let the user make the publication decision, and never describe an image as cleared without supporting terms.
 
 ## Final acceptance and reporting
 
