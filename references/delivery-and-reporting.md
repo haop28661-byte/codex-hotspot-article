@@ -4,7 +4,7 @@ Use this reference when entering final acceptance and preparing the user-facing 
 
 ## Delivery folder rules
 
-The delivery root is the user-supplied output directory or the current workspace root when no output directory is supplied. Resolve a relative output directory against the workspace root. Everything is stored directly under that resolved root. One run produces one task folder with no subdirectories.
+The delivery root is the user-supplied output directory or the skill root when no output directory is supplied. The skill root is the directory containing `SKILL.md`, so the default output stays inside the folder where the skill is installed rather than in the current Codex workspace. Resolve a relative output directory against the skill root. Everything is stored directly under that resolved root. One run produces one task folder with no subdirectories.
 
 - Complete: `<delivery-root>/<topic>/`
 - Partial: `<delivery-root>/<topic>_部分完成_<YYYYMMDD-HHmm>/`

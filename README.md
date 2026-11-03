@@ -101,7 +101,17 @@ ln -s /path/to/codex-hotspot-article ~/.codex/skills/hotspot-article
 $hotspot-article 某地公共交通涨价；字数范围：3000-5000字
 ```
 
-文章默认写入当前 Codex 工作区根目录。也可以明确指定一个任意可写的位置：
+文章默认写入 skill 的安装文件夹，也就是包含 `SKILL.md` 的那个目录，不会自动放到当前 Codex 工作区或其他盘符。例如项目级安装在 `.agents/skills/hotspot-article` 时，默认输出结构是：
+
+```text
+.agents/
+└── skills/
+    └── hotspot-article/
+        ├── SKILL.md
+        └── 某地公共交通涨价/
+```
+
+也可以明确指定一个任意可写的位置：
 
 ```text
 $hotspot-article 某地公共交通涨价；字数范围：3000-5000字；输出目录：D:\文章
