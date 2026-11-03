@@ -101,15 +101,19 @@ ln -s /path/to/codex-hotspot-article ~/.codex/skills/hotspot-article
 $hotspot-article 某地公共交通涨价；字数范围：3000-5000字
 ```
 
-文章默认写入 skill 的安装文件夹，也就是包含 `SKILL.md` 的那个目录，不会自动放到当前 Codex 工作区或其他盘符。例如项目级安装在 `.agents/skills/hotspot-article` 时，默认输出结构是：
+文章始终默认写入当前 Codex 项目的根目录，与 skill 是安装在用户级 `.codex/skills` 还是项目级 `.agents/skills` 无关，也不会写进 skill 自己的目录。
+
+例如当前项目是 `D:\写作项目`：
 
 ```text
-.agents/
-└── skills/
-    └── hotspot-article/
-        ├── SKILL.md
-        └── 某地公共交通涨价/
+D:\写作项目\
+├── .agents\skills\hotspot-article\    ← 可选的项目级安装位置
+└── 某地公共交通涨价\
 ```
+
+即使用户级安装在 `%USERPROFILE%\.codex\skills\hotspot-article`，输出仍然是 `D:\写作项目\某地公共交通涨价\`。
+
+如果 Codex 无法判断当前项目根目录，skill 会先询问项目文件夹，不会回退到 C 盘、用户目录或一个无关的工作目录。
 
 也可以明确指定一个任意可写的位置：
 

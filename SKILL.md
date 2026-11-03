@@ -13,7 +13,7 @@ metadata:
   - New task: `$hotspot-article 主题；字数范围：3000-5000字`
   - New task with a custom delivery root: `$hotspot-article 主题；字数范围：3000-5000字；输出目录：<path>`
   - Resume illustrations: `$hotspot-article 继续：<delivery-root>/<topic>_部分完成_<YYYYMMDD-HHmm>`
-- Treat the directory containing this `SKILL.md` as the skill root. Resolve references and scripts relative to that directory; never assume a fixed installation path or drive. The delivery root defaults to the skill root. If `输出目录` is supplied, use it as the delivery root, resolving a relative path against the skill root. Never use the current Codex workspace as an implicit output location.
+- Treat the directory containing this `SKILL.md` as the skill root and resolve references and scripts relative to it. The active project root is the workspace root of the current Codex project, regardless of whether this skill is installed globally or inside the project. If the skill root matches `<project>/.agents/skills/hotspot-article`, derive the project root as `<project>`. For a user-level installation such as `~/.codex/skills/hotspot-article`, use the active Codex project workspace, not the terminal's current directory. The delivery root defaults to the active project root. If `输出目录` is supplied, use it as the delivery root, resolving a relative path against the active project root. Never default to the skill root, a filesystem drive root, the user home directory, or an unrelated shell working directory. If the active project root is unavailable or ambiguous, ask for the project folder or a custom `输出目录` before writing.
 - A new task must provide both the research topic and a positive inclusive article-length range. If either is missing, ambiguous, or invalid, ask only for the missing or corrected information and stop. Do not infer either from earlier runs, folders, samples, or defaults.
 - Complete the applicable research, writing, illustration, and packaging work in the same invocation. Do not ask the user to send the prompt again or split the workflow.
 - Write in Chinese unless the topic explicitly requests another language.
@@ -65,7 +65,7 @@ The normal success path must finish in one invocation. A partial or blocked run 
 
 ## Delivery lifecycle
 
-The delivery root is the user-supplied output directory, or the skill root when none is supplied. The default therefore places the task folder directly inside the folder where this skill is installed. It may instead be any local drive or filesystem path that the task can write to safely when the user supplies `输出目录`.
+The delivery root is the user-supplied output directory, or the active project root when none is supplied. The default therefore places the task folder directly inside the current Codex project, whether the skill itself is installed globally or in that project. It may instead be any local drive or filesystem path that the task can write to safely when the user supplies `输出目录`.
 
 1. Do all research, note-taking, review variants, staging, drafts, failed downloads, and verification work in one newly created operating-system temporary directory.
 2. Assemble a `staging` child directory containing only files that may appear in the delivered task folder. The staging directory is not the delivery folder.
