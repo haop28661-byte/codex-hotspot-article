@@ -1,0 +1,6 @@
+interface:
+  display_name: "Hotspot Article"
+  short_description: "Write sourced, approachable public long-form articles"
+
+policy:
+  allow_implicit_invocation: false
